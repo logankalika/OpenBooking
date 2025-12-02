@@ -1,0 +1,12 @@
+CREATE TABLE appointment_info {
+	appointment_datetime, DATETIME NOT NULL,
+	appointment_id, INT PRIMARY KEY AUTO_INCREMENT,
+	fname		varchar(80),
+	lname		varchar(80),
+	phone		varchar(80),
+	email		varchar(80),
+	type		TEXT CHECK (type IN ('in-person', 'video', 'phone')),
+	zoom_link	TEXT,
+	notes		varchar(1000), 
+};
+
